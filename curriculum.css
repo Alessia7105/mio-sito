@@ -94,8 +94,8 @@ body {
 
 .hero-img {
   flex-shrink: 0;
-  width: 320px;   /* più grande di prima */
-  height: 320px;  /* mantiene proporzioni */
+  width: 320px;   
+  height: 320px;  
 }
 
 @media (max-width: 1024px) {
