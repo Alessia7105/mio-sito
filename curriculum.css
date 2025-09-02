@@ -9,13 +9,13 @@
   background-color: #fff;
   display: flex;
   justify-content: space-around;
-  padding: 1.25rem 3.75rem
+  padding: 20px 60px
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 1.75rem;
+  gap: 30px;
 }
 
 .navbar ul li a {
@@ -37,96 +37,114 @@ body {
   align-items: flex-start;
   justify-content:space-between;
   max-width: 1200px;
-  margin: 3.75rem auto;
-  gap: 2.5rem;
-  padding: 0 1.25rem;
+  margin: 60px auto;
+  gap: 40px;
+  padding: 0 20px;
   }
 
 .Curriculum .text {
   flex: 1;
   position: relative;
-  padding-left: 1.875rem;
+  padding-left: 30px;
   border-left: 3px solid #8A226F;
   max-width: 75%; 
 }
 .Curriculum h1 {
-  font-size: 2.25rem;
-  margin-bottom: 1.875rem;
+  font-size: 36px;
+  margin-bottom: 30px;
   color: #1a1a1a;
   font-weight: 900;
 }
 
 .Curriculum h2 {
-  font-size: 1.5rem;
+  font-size: 24px;
   color: #8A226F;
   font-weight: 700;
-  margin-top: 2.5rem;
-  margin-bottom: 0.9375rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
   }
   
 
 .Curriculum h3 {
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: bold;
-  margin-bottom: 0.3125rem;
+  margin-bottom: 5px;
 }
 
 .Curriculum p {
-  margin-bottom: 0.9375rem;
-  font-size: 1rem;
+  margin-bottom: 15px;
+  font-size: 16px;
 }
 
 /* Timeline entries */
 .entry {
   position: relative;
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 }
 
 .circle {
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 14px;
+  height: 14px;
   background-color: #8A226F;
   border-radius: 50%;
   position: absolute;
-  left: -2.3125rem;
-  top: 0.2rem;
+  left: -37px;
+  top: 4px;
 }
 
 .hero-img {
+  flex-shrink: 0;
+  width: 320px;   /* più grande di prima */
+  height: 320px;  /* mantiene proporzioni */
+}
+
+@media (max-width: 1024px) {
+  .hero-img {
+    width: 280px;
+    height: 280px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-img {
-    flex-shrink: 1; /* permette di ridursi */
+    width: 220px;
+    height: 220px;
+  }
 }
-}
+
+@media (max-width: 480px) {
+  .hero-img {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 .hero-img img {
   width: 100%;
-  max-width: 18.125rem;
-  height: auto;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .Lingue {
   background-color: #f9e9f3;
-  padding:  1.875rem;
-  margin: 3.75rem auto;
-  max-width: 62.5rem;
-  border-radius: 1.25rem;
-  font-size: 1.125rem;
+  padding: 30px;
+  margin: 60px auto;
+  max-width: 1000px;
+  border-radius: 20px;
+  font-size: 18px;
 }
 
 .Lingue h2 {
-  margin-bottom: 0.9375rem;
-  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-size: 24px;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 1.875rem;
+  padding: 30px;
   background-color: #f9e9f3;
-  font-size: 0.875rem;
+  font-size: 14px;
 }

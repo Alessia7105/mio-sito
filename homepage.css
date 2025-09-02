@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Lato', 'Arial';
+  font-family: 'Lato';
   background-color: #fff;
   color: #1a1a1a;
   line-height: 1.6;
@@ -179,60 +179,102 @@ footer {
   font-size: 14px;
 }
 
-/* --- Media Queries per mobile responsive --- */
-@media (max-width: 768px) {
-  
-  /* Navbar: menu verticale e padding ridotto */
-  .navbar nav {
-    flex-direction: column;
-    padding: 15px;
-  }
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
+/* --- Media Queries per il responsive --- */
+
+/* Tablet / schermi medi */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 30px 40px;
   }
 
-  /* Hero: testo e immagine impilati, padding ridotto */
-  .hero {
-    flex-direction: column;
-    padding: 5vw;
-  }
-  .hero-text {
-    padding-right: 0;
-    margin-bottom: 20px;
-  }
   .hero-text h1 {
-    font-size: 8vw; /* scala con larghezza schermo */
+    font-size: 32px;
   }
+
   .hero-text p {
     max-width: 100%;
   }
+
+  .navbar nav {
+    padding: 20px 40px;
+  }
+}
+
+/* Smartphone / schermi piccoli */
+@media (max-width: 768px) {
+  /* Navbar verticale */
+  .navbar nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  /* Hero impilato */
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
   .buttons {
     flex-direction: column;
-    gap: 3vw;
+    gap: 15px;
+    align-items: center;
   }
+
+  /* Hero image più piccola */
   .hero-img img {
-    width: 40vw;
-    height: auto;
-    margin: 0 auto;
+    width: 180px;
+    height: 180px;
   }
 
-  /* About: padding e margini ridotti */
+  /* About e form */
   .about {
-    padding: 5vw;
-    margin: 5vw auto;
-    max-width: 90%;
+    padding: 30px 20px;
   }
 
-  /* Contact: input e button ridimensionati */
-  .contact input,
+  .contact input {
+    width: 100%;
+    max-width: 300px;
+  }
+
   .contact button {
-    width: 80%;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Extra piccoli schermi */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 24px;
   }
 
-  /* Footer: padding ridotto */
-  footer {
-    padding: 5vw;
-    font-size: 3.5vw;
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .navbar nav {
+    padding: 15px;
   }
 }
