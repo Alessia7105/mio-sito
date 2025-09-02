@@ -9,7 +9,7 @@
   background-color: #fff;
   display: flex;
   justify-content: space-around;
-  padding: 20px 60px
+  padding: 20px 60px;
 }
 
 .navbar ul {
@@ -31,28 +31,26 @@ body {
   line-height: 1.6;
 }
 
-
 .img-responsive {
   width: 100%;
   height: auto;
 }
 
-
 .content {
   padding: 60px 80px;
 }
 
-/** boxes **/
+/* boxes */
 .container-col {
   display: flex;
   flex-direction: column;
-  gap: 40px
+  gap: 40px;
 }
 
 .container-row {
   display: flex;
   flex-direction: row;
-  gap: 40px
+  gap: 40px;
 }
 
 .box {
@@ -87,4 +85,45 @@ footer {
   padding: 30px;
   background-color: #f9e9f3;
   font-size: 14px;
+}
+
+/* --- Media Queries minime per mobile --- */
+@media (max-width: 768px) {
+
+  /* Navbar: menu verticale e padding ridotto */
+  .navbar {
+    flex-direction: column;
+    padding: 5vw 4vw;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 3vw;
+  }
+
+  /* Content: padding ridotto */
+  .content {
+    padding: 5vw;
+  }
+
+  /* Container-row: diventa colonna e gap ridotto */
+  .container-row {
+    flex-direction: column;
+    gap: 5vw;
+  }
+
+  /* Box-content: padding più stretto */
+  .box .box-content {
+    padding: 3vw;
+  }
+
+  /* Button: larghezza ridotta */
+  .box-content .button {
+    padding: 3vw 5vw;
+  }
+
+  /* Footer: padding e font ridotti */
+  footer {
+    padding: 5vw;
+    font-size: 3.5vw;
+  }
 }

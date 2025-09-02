@@ -125,7 +125,6 @@ body {
   margin-bottom: 20px;
 }
 
-
 /* Contact */
 .contact {
   text-align: center;
@@ -178,4 +177,62 @@ footer {
   padding: 30px;
   background-color: #f9e9f3;
   font-size: 14px;
+}
+
+/* --- Media Queries per mobile responsive --- */
+@media (max-width: 768px) {
+  
+  /* Navbar: menu verticale e padding ridotto */
+  .navbar nav {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Hero: testo e immagine impilati, padding ridotto */
+  .hero {
+    flex-direction: column;
+    padding: 5vw;
+  }
+  .hero-text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .hero-text h1 {
+    font-size: 8vw; /* scala con larghezza schermo */
+  }
+  .hero-text p {
+    max-width: 100%;
+  }
+  .buttons {
+    flex-direction: column;
+    gap: 3vw;
+  }
+  .hero-img img {
+    width: 40vw;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* About: padding e margini ridotti */
+  .about {
+    padding: 5vw;
+    margin: 5vw auto;
+    max-width: 90%;
+  }
+
+  /* Contact: input e button ridimensionati */
+  .contact input,
+  .contact button {
+    width: 80%;
+  }
+
+  /* Footer: padding ridotto */
+  footer {
+    padding: 5vw;
+    font-size: 3.5vw;
+  }
 }
