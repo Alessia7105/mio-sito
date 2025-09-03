@@ -5,28 +5,17 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Lato', 'Arial', sans-serif;
-  background-color: #fff;
-  color: #1a1a1a;
-  line-height: 1.6;
-}
-
-/* Navbar */
 .navbar {
   background-color: #fff;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  padding: 20px 60px;
-  flex-wrap: wrap;
+  padding: 20px 60px
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
   gap: 30px;
-  flex-wrap: wrap;
 }
 
 .navbar ul li a {
@@ -35,26 +24,31 @@ body {
   color: #1a1a1a;
 }
 
-/* Curriculum Section */
+body {
+  font-family: 'Lato', 'Arial';
+  background-color: #fff;
+  color: #1a1a1a;
+  line-height: 1.6;
+  /*padding-bottom: 100px;*/
+}
+
 .Curriculum {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content:space-between;
   max-width: 1200px;
   margin: 60px auto;
   gap: 40px;
   padding: 0 20px;
-  flex-wrap: wrap;
-}
+  }
 
 .Curriculum .text {
   flex: 1;
   position: relative;
   padding-left: 30px;
   border-left: 3px solid #8A226F;
-  max-width: 75%;
+  max-width: 75%; 
 }
-
 .Curriculum h1 {
   font-size: 36px;
   margin-bottom: 30px;
@@ -68,7 +62,8 @@ body {
   font-weight: 700;
   margin-top: 40px;
   margin-bottom: 15px;
-}
+  }
+  
 
 .Curriculum h3 {
   font-size: 18px;
@@ -97,11 +92,31 @@ body {
   top: 4px;
 }
 
-/* Hero Image */
 .hero-img {
   flex-shrink: 0;
-  width: 280px;
-  height: 280px;
+  width: 320px;   
+  height: 320px;  
+}
+
+@media (max-width: 1024px) {
+  .hero-img {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-img {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 .hero-img img {
@@ -112,7 +127,6 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Lingue Section */
 .Lingue {
   background-color: #f9e9f3;
   padding: 30px;
@@ -135,71 +149,7 @@ footer {
   font-size: 14px;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .hero-img {
-    width: 240px;
-    height: 240px;
-  }
 
-  .Curriculum .text {
-    max-width: 70%;
-  }
-}
-
-@media (max-width: 768px) {
-  .Curriculum {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .Curriculum .text {
-    max-width: 100%;
-    padding-left: 20px;
-    border-left: 3px solid #8A226F;
-  }
-
-  .hero-img {
-    width: 180px;  /* immagine più piccola */
-    height: 180px;
-  }
-
-  .Lingue {
-    font-size: 16px; /* leggermente più piccola */
-    padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-img {
-    width: 140px;  /* ancora più piccola su telefoni piccoli */
-    height: 140px;
-  }
-
-  .Lingue {
-    font-size: 14px; /* ancora più piccola su mobile */
-    padding: 15px;
-  }
-
-  .navbar {
-    padding: 15px 20px;
-  }
-
-  .navbar ul {
-    gap: 15px;
-    justify-content: center;
-  }
-
-  .Curriculum h1 {
-    font-size: 28px;
-    text-align: center;
-  }
-
-  .Curriculum h2 {
-    font-size: 20px;
-  }
-}
 
 
 
