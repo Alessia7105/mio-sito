@@ -5,63 +5,79 @@
   box-sizing: border-box;
 }
 
+/* Navbar */
 .navbar {
   background-color: #fff;
   display: flex;
-  justify-content: space-around;
-  padding: 20px 60px
+  justify-content: center; /* centrata */
+  padding: 20px 60px;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 40px; /* leggero aumento dello spazio tra link */
 }
 
 .navbar ul li a {
   text-decoration: none;
   font-weight: bold;
   color: #1a1a1a;
+  font-size: 18px;
 }
 
+@media (max-width: 480px) {
+  .navbar ul li a {
+    font-size: 14px; /* riduzione font su mobile */
+  }
+  .navbar ul {
+    gap: 15px;
+  }
+}
+
+/* Body */
 body {
-  font-family: 'Lato', 'Arial';
+  font-family: 'Lato', 'Arial', sans-serif;
   background-color: #fff;
   color: #1a1a1a;
   line-height: 1.6;
 }
 
-
-.img-responsive {
-  width: 100%;
-  height: auto;
-}
-
-
+/* Content wrapper */
 .content {
-  padding: 60px 80px;
+  padding: 60px 30px; /* padding leggermente ridotto e uniforme */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/** boxes **/
+/* Boxes */
 .container-col {
   display: flex;
   flex-direction: column;
-  gap: 40px
+  gap: 40px;
 }
 
 .container-row {
   display: flex;
   flex-direction: row;
-  gap: 40px
+  gap: 40px;
+  flex-wrap: wrap; /* permette il wrap su schermi piccoli */
 }
 
 .box {
-  flex: 1 1;
+  flex: 1 1 300px; /* larghezza minima per responsive */
   background-color: rgba(128, 34, 111, 0.09);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
 }
 
 .box .box-content {
-  padding: 20px;
+  padding: 25px; /* leggero aumento del padding */
   text-align: center;
 }
 
@@ -71,6 +87,8 @@ body {
   color: #fff;
   padding: 12px 24px;
   text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
 }
 
 .box-content .button:hover {
@@ -79,6 +97,44 @@ body {
 
 .box-content h3 {
   margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.box-content p {
+  font-size: 16px;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .container-row {
+    gap: 25px;
+  }
+  .box {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .box {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .box-content h3 {
+    font-size: 18px;
+  }
+  .box-content p {
+    font-size: 14px;
+  }
+  .box-content .button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }
 
 /* Footer */
