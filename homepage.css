@@ -202,10 +202,11 @@ footer {
 
 /* Smartphone / schermi piccoli */
 @media (max-width: 768px) {
-  /* Hero mobile: titolo -> immagine -> testo -> bottoni */
+  /* Hero mobile: titolo -> testo -> immagine -> bottoni */
   .hero {
     padding: 20px;
-    align-items: stretch;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-content {
@@ -213,21 +214,31 @@ footer {
     grid-template-columns: 1fr;
     grid-template-areas:
       "title"
-      "image"
       "text"
+      "image"
       "buttons";
     row-gap: 16px;
     justify-items: center;
+    width: 100%;
   }
 
   .hero-text {
-    display: contents;
+    display: flex;
+    flex-direction: column; /* testi uno sotto l'altro */
+    align-items: center;
+    width: 100%;
   }
 
   .hero-text h1 {
     grid-area: title;
     font-size: 28px;
     text-align: center;
+  }
+
+  .hero-text p {
+    grid-area: text;
+    text-align: center;
+    max-width: 100%;
   }
 
   .hero-img {
@@ -241,19 +252,12 @@ footer {
     height: 180px;
   }
 
-  .hero-text p {
-    grid-area: text;
-    text-align: center;
-    max-width: 600px;
-  }
-
   .buttons {
     grid-area: buttons;
     display: flex;
-    flex-direction: row;  /* bottoni affiancati */
     gap: 15px;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
   }
 
   /* Navbar centrata e link affiancati */
@@ -269,7 +273,7 @@ footer {
     flex-direction: row;
     gap: 15px;
     align-items: center;
-    flex-wrap: nowrap;  /* impedisce ai link di andare a capo */
+    flex-wrap: nowrap;
   }
 
   .navbar ul li a {
@@ -307,6 +311,6 @@ footer {
   }
 
   .navbar ul li a {
-    font-size: 14px; /* riduce font per non andare a capo */
+    font-size: 14px;
   }
 }

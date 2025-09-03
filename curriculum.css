@@ -5,63 +5,50 @@
   box-sizing: border-box;
 }
 
-/* Navbar */
 .navbar {
   background-color: #fff;
   display: flex;
-  justify-content: center; /* centrata */
-  padding: 20px 60px; /* manteniamo il padding originale */
+  justify-content: space-around;
+  padding: 20px 60px
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 40px; /* leggero aumento dello spazio tra link */
+  gap: 30px;
 }
 
 .navbar ul li a {
   text-decoration: none;
   font-weight: bold;
   color: #1a1a1a;
-  font-size: 18px;
 }
 
-@media (max-width: 480px) {
-  .navbar ul li a {
-    font-size: 14px; /* riduzione font su mobile */
-  }
-  .navbar ul {
-    gap: 15px; /* meno spazio per non andare a capo */
-  }
-}
-
-/* Body */
 body {
-  font-family: 'Lato', 'Arial', sans-serif;
+  font-family: 'Lato', 'Arial';
   background-color: #fff;
   color: #1a1a1a;
   line-height: 1.6;
+  /*padding-bottom: 100px;*/
 }
 
-/* Curriculum */
 .Curriculum {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content:space-between;
   max-width: 1200px;
   margin: 60px auto;
   gap: 40px;
-  padding: 40px 30px; /* aumento padding generale */
-}
+  padding: 0 20px;
+  }
 
 .Curriculum .text {
   flex: 1;
   position: relative;
   padding-left: 30px;
   border-left: 3px solid #8A226F;
-  max-width: 75%;
+  max-width: 75%; 
 }
-
 .Curriculum h1 {
   font-size: 36px;
   margin-bottom: 30px;
@@ -75,7 +62,8 @@ body {
   font-weight: 700;
   margin-top: 40px;
   margin-bottom: 15px;
-}
+  }
+  
 
 .Curriculum h3 {
   font-size: 18px;
@@ -104,11 +92,10 @@ body {
   top: 4px;
 }
 
-/* Hero image */
 .hero-img {
   flex-shrink: 0;
-  width: 320px;
-  height: 320px;
+  width: 320px;   
+  height: 320px;  
 }
 
 @media (max-width: 1024px) {
@@ -119,18 +106,9 @@ body {
 }
 
 @media (max-width: 768px) {
-  .Curriculum {
-    flex-direction: column;
-    padding: 30px 20px; /* padding leggermente ridotto su tablet */
-  }
-  .Curriculum .text {
-    max-width: 100%;
-    padding-left: 20px;
-  }
   .hero-img {
     width: 220px;
     height: 220px;
-    margin: 0 auto 20px;
   }
 }
 
@@ -139,24 +117,19 @@ body {
     width: 180px;
     height: 180px;
   }
-  .Curriculum h1 {
-    font-size: 28px;
-  }
-  .Curriculum h2 {
-    font-size: 20px;
-  }
-  .Curriculum h3 {
-    font-size: 16px;
-  }
-  .Curriculum p {
-    font-size: 14px;
-  }
 }
 
-/* Lingue */
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
 .Lingue {
   background-color: #f9e9f3;
-  padding: 40px 30px; /* aumento padding */
+  padding: 30px;
   margin: 60px auto;
   max-width: 1000px;
   border-radius: 20px;
@@ -175,3 +148,4 @@ footer {
   background-color: #f9e9f3;
   font-size: 14px;
 }
+
