@@ -5,21 +5,15 @@
   box-sizing: border-box;
 }
 
-/* Navbar */
+/* Navbar (stile come prima pagina) */
 .navbar {
-  background-color: #ffffff;
+  background-color: #fff;
   display: flex;
   justify-content: space-around;
-}
-
-.navbar nav {
-  display: flex;
-  justify-content: flex-end;
-  padding: 30px 60px;
+  padding: 20px 60px;
 }
 
 .navbar ul {
-  align-items: center;
   list-style: none;
   display: flex;
   gap: 30px;
@@ -31,6 +25,7 @@
   color: #1a1a1a;
 }
 
+/* Body */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -38,6 +33,7 @@ body {
   background-color: #fff;
 }
 
+/* Contatti Container */
 .contatti-container {
   display: flex;
   flex-wrap: wrap;
@@ -77,6 +73,7 @@ body {
   max-width: 32px;
 }
 
+/* Form */
 .contatti-form {
   flex: 1;
   min-width: 300px;
@@ -118,22 +115,27 @@ body {
   background-color: #5b5b5b;
 }
 
+/* Footer */
 footer {
   text-align: center;
   background-color: #f7edf5;
   padding: 30px 0;
   font-size: 13px;
   color: #333;
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  position: relative; /* Non più absolute per evitare overlap su mobile */
 }
 
-/* --- Media Queries minime per mobile --- */
-@media (max-width: 768px) {
+/* --- Media Queries --- */
+@media (max-width: 1024px) {
+  .contatti-container {
+    gap: 20px;
+  }
+}
 
+@media (max-width: 768px) {
   /* Navbar: menu verticale e padding ridotto */
-  .navbar nav {
+  .navbar {
     flex-direction: column;
     padding: 5vw 4vw;
   }
@@ -142,7 +144,7 @@ footer {
     gap: 3vw;
   }
 
-  /* Contatti-container: diventa colonna e gap ridotto */
+  /* Contatti-container: diventa colonna */
   .contatti-container {
     flex-direction: column;
     padding: 5vw;
@@ -183,10 +185,11 @@ footer {
     padding: 3vw 0;
   }
 
-  /* Footer: padding e font scalati */
+  /* Footer scalato */
   footer {
     padding: 5vw 0;
     font-size: 3.5vw;
   }
 }
+
 
