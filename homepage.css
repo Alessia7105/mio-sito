@@ -5,8 +5,9 @@
   box-sizing: border-box;
 }
 
+/* Body */
 body {
-  font-family: 'Lato';
+  font-family: 'Lato', 'Arial';
   background-color: #fff;
   color: #1a1a1a;
   line-height: 1.6;
@@ -15,13 +16,11 @@ body {
 /* Navbar */
 .navbar {
   background-color: #FFE6F9;
-  display: flex;
-  justify-content: space-around;
 }
 
 .navbar nav {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   padding: 30px 60px;
 }
 
@@ -35,37 +34,41 @@ body {
   text-decoration: none;
   font-weight: bold;
   color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #8A226F;
 }
 
 /* Hero */
 .hero {
   padding: 40px 60px;
   background-color: #FFE6F9;
-  display: flex;
-  justify-content:flex-start;
 }
 
 .hero-content {
   display: flex;
-  align-items: center;
-  justify-content:flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 40px;
+}
+
+.hero-title {
+  flex: 1;
+  font-size: 40px;
+  font-weight: 700;
+  color: #2b2346;
+}
+
+.hero-title span {
+  font-weight: 800;
 }
 
 .hero-text {
-  flex: 1;
-  padding-right: 40px;
-}
-
-.hero-text h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-.hero-text h1 span {
-  font-weight: 800;
-  color: #2b2346;
+  flex: 2;
 }
 
 .hero-text p {
@@ -101,7 +104,7 @@ body {
   background-color: #5b5b5b;
 }
 
-/* Image */
+/* Hero Image */
 .hero-img img {
   width: 240px;
   height: 240px;
@@ -125,62 +128,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Contact */
-.contact {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.contact h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.contact p {
-  margin-bottom: 30px;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.contact input {
-  width: 300px;
-  padding: 12px 20px;
-  border-radius: 25px;
-  border: none;
-  background-color: #eaeaea;
-  font-size: 16px;
-}
-
-.contact button {
-  background-color: #2b2346;
-  color: white;
-  padding: 12px 30px;
-  border-radius: 25px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.contact button:hover {
-  background-color: #5b5b5b;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 30px;
-  background-color: #f9e9f3;
-  font-size: 14px;
-}
-
-/* --- Media Queries per il responsive --- */
-
 /* Tablet / schermi medi */
 @media (max-width: 1024px) {
   .hero {
@@ -202,76 +149,60 @@ footer {
 
 /* Smartphone / schermi piccoli */
 @media (max-width: 768px) {
-  /* Hero mobile: titolo -> immagine -> testo -> bottoni */
-  .hero {
-    padding: 20px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-  }
-
-  .hero-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .hero-text h1 {
-    font-size: 28px;
-    margin-bottom: 16px;
-  }
-
-  .hero-text p {
-    font-size: 16px;
-    max-width: 90%;
-    margin-bottom: 16px;
-  }
-
-  .hero-img {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 16px;
-  }
-
-  .hero-img img {
-    width: 180px;
-    height: 180px;
-  }
-
-  .buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* Navbar centrata e link affiancati */
+  /* Navbar verticale */
   .navbar nav {
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 15px;
     padding: 20px;
   }
 
   .navbar ul {
-    flex-direction: row;
+    flex-direction: column;
     gap: 15px;
     align-items: center;
-    flex-wrap: nowrap;
   }
 
-  .navbar ul li a {
-    font-size: 16px;
+  /* Hero impilato */
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .hero-content {
+    flex-direction: column; /* impilamento verticale */
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Modifica richiesta: immagine prima del testo */
+  .hero-img {
+    order: -1; /* immagine prima del testo */
+    margin-bottom: 15px; /* spazio tra immagine e testo */
+  }
+
+  .hero-text {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+    margin-bottom: 10px; /* spazio sotto il titolo */
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  /* Hero image più piccola */
+  .hero-img img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; /* opzionale: effetto circolare */
   }
 
   /* About e form */
@@ -304,8 +235,11 @@ footer {
     padding: 15px;
   }
 
-  .navbar ul li a {
-    font-size: 14px;
+  .hero-img img {
+    width: 150px;
+    height: 150px;
   }
 }
+
+
 
