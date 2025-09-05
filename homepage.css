@@ -1,3 +1,23 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', 'Arial';
+  font-family: 'Lato';
+  background-color: #fff;
+  color: #1a1a1a;
+  line-height: 1.6;
+@@ -179,60 +179,102 @@
+  font-size: 14px;
+}
+
+/* --- Media Queries per mobile responsive --- */
+/* --- Media Queries per il responsive --- */
+
 /* Tablet / schermi medi */
 @media (max-width: 1024px) {
   .hero {
