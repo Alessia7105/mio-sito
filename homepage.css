@@ -5,16 +5,23 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Lato', 'Arial';
+  background-color: #fff;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
 /* Navbar */
 .navbar {
-  background-color: #ffffff;
+  background-color: #FFE6F9;
   display: flex;
   justify-content: space-around;
 }
 
 .navbar nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content:flex-end;
   padding: 30px 60px;
 }
 
@@ -30,101 +37,204 @@
   color: #1a1a1a;
 }
 
-
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-}
-
-.contatti-container {
+/* Hero */
+.hero {
+  padding: 40px 60px;
+  background-color: #FFE6F9;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 60px 80px;
-  gap: 40px;
+  justify-content:flex-start ;
 }
 
-.contatti-sinistra {
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
   flex: 1;
-  min-width: 280px;
-  max-width: 400px;
+  padding-right: 40px;
 }
 
-.contatti-sinistra h1 {
-  font-size: 32px;
-  color: #181b34;
+.hero-text h1 {
+  font-size: 40px;
   margin-bottom: 20px;
 }
 
-.contatti-sinistra p {
-  font-size: 16px;
-  color: #333;
-  line-height: 1.5;
-  margin-bottom: 20px;
+.hero-text h1 span {
+  font-weight: 800;
+  color: #2b2346;
 }
 
-.social-icon a {
-  margin-right: 15px;
-  color: #181b34;
+.hero-text p {
+  margin-bottom: 15px;
+  max-width: 600px;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
   text-decoration: none;
+  text-align: center;
 }
 
-.social-icon img {
-  width: 100%;
-  height: 100%;
-  max-width: 32px;
-}
-
-.contatti-form {
-  flex: 1;
-  min-width: 300px;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contatti-form input,
-.contatti-form textarea {
-  background-color: #eaeaea;
-  border: none;
-  padding: 15px;
-  border-radius: 25px;
-  font-size: 14px;
-  resize: none;
-  font-family: inherit;
-}
-
-.contatti-form textarea {
-  border-radius: 20px;
-  height: 120px;
-}
-
-.contatti-form button {
-  background-color: #8e2d75;
+.btn.purple {
+  background-color: #8A226F;
   color: white;
-  padding: 12px 0;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  cursor: pointer;
-  width: 150px;
-  align-self: center;
 }
 
-.contatti-form button:hover {
+.btn.outline {
+  background-color: #2b2346;
+  color: white;
+}
+
+.btn:hover {
   background-color: #5b5b5b;
 }
 
+/* Image */
+.hero-img img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* About */
+.about {
+  max-width: 900px;
+  margin: 60px auto;
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.about h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+
+/* Contact */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin-bottom: 30px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact input {
+  width: 300px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  background-color: #eaeaea;
+  font-size: 16px;
+}
+
+.contact button {
+  background-color: #2b2346;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.contact button:hover {
+  background-color: #5b5b5b;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  background-color: #f7edf5;
-  padding: 30px 0;
-  font-size: 13px;
-  color: #333;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  padding: 30px;
+  background-color: #f9e9f3;
+  font-size: 14px;
+}
+
+
+/* --- Media Queries per mobile responsive --- */
+@media (max-width: 768px) {
+  
+  /* Navbar: menu verticale e padding ridotto */
+  .navbar nav {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Hero: testo e immagine impilati, padding ridotto */
+  .hero {
+    flex-direction: column;
+    padding: 5vw;
+  }
+  .hero-text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .hero-text h1 {
+    font-size: 8vw; /* scala con larghezza schermo */
+  }
+  .hero-text p {
+    max-width: 100%;
+  }
+  .buttons {
+    flex-direction: column;
+    gap: 3vw;
+  }
+  .hero-img img {
+    width: 40vw;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* About: padding e margini ridotti */
+  .about {
+    padding: 5vw;
+    margin: 5vw auto;
+    max-width: 90%;
+  }
+
+  /* Contact: input e button ridimensionati */
+  .contact input,
+  .contact button {
+    width: 80%;
+  }
+
+  /* Footer: padding ridotto */
+  footer {
+    padding: 5vw;
+    font-size: 3.5vw;
+  }
 }
