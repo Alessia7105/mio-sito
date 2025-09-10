@@ -5,15 +5,34 @@
   box-sizing: border-box;
 }
 
+/* Layout globale */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+}
+
 /* Navbar */
 .navbar {
-  background-color: #fff;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-around;
-  padding: 20px 60px
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 60px;
 }
 
 .navbar ul {
+  align-items: center;
   list-style: none;
   display: flex;
   gap: 30px;
@@ -25,11 +44,9 @@
   color: #1a1a1a;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
+/* Contenuto principale */
+main {
+  flex: 1; /* fa crescere il contenuto e spinge il footer in basso */
 }
 
 .contatti-container {
@@ -112,29 +129,20 @@ body {
   background-color: #5b5b5b;
 }
 
+/* Footer */
 footer {
   text-align: center;
   background-color: #f7edf5;
   padding: 30px 0;
   font-size: 13px;
   color: #333;
-  /* ❌ tolto absolute */
+  position: relative; /* Modifica: non più absolute */
+  bottom: auto;
   width: 100%;
 }
 
-
 /* --- Media Queries minime per mobile --- */
 @media (max-width: 768px) {
-
-  /* Navbar: menu verticale e padding ridotto */
-  .navbar nav {
-    flex-direction: column;
-    padding: 5vw 4vw;
-  }
-  .navbar ul {
-    flex-direction: column;
-    gap: 3vw;
-  }
 
   /* Contatti-container: diventa colonna e gap ridotto */
   .contatti-container {
@@ -183,6 +191,3 @@ footer {
     font-size: 3.5vw;
   }
 }
-
-
-

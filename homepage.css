@@ -13,6 +13,7 @@ body {
 }
 
 /* Navbar */
+/* Stili esistenti */
 .navbar {
   background-color: #FFE6F9;
   display: flex;
@@ -21,7 +22,7 @@ body {
 
 .navbar nav {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   padding: 30px 60px;
 }
 
@@ -37,7 +38,19 @@ body {
   color: #1a1a1a;
 }
 
-/* Hero */
+/* --- NUOVO: correzione per mobile --- */
+@media (max-width: 768px) {
+  .navbar nav {
+    justify-content: center; /* centra gli elementi */
+    padding: 20px; /* meno padding per risparmiare spazio su mobile */
+  }
+
+  .navbar ul {
+    gap: 20px; /* opzionale: riduce la distanza tra link */
+  }
+}
+
+
 /* Hero */
 .hero {
   padding: 40px 20px; /* meno padding sui lati per mobile */
