@@ -53,26 +53,26 @@ body {
   background-color: #fff;
   color: #1a1a1a;
   line-height: 1.6;
-  /*padding-bottom: 100px;*/
 }
 
 .Curriculum {
   display: flex;
   align-items: flex-start;
-  justify-content:space-between;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 60px auto;
   gap: 40px;
   padding: 0 20px;
-  }
+}
 
 .Curriculum .text {
   flex: 1;
   position: relative;
   padding-left: 30px;
   border-left: 3px solid #8A226F;
-  max-width: 75%; 
+  max-width: 75%;
 }
+
 .Curriculum h1 {
   font-size: 36px;
   margin-bottom: 30px;
@@ -86,8 +86,7 @@ body {
   font-weight: 700;
   margin-top: 40px;
   margin-bottom: 15px;
-  }
-  
+}
 
 .Curriculum h3 {
   font-size: 18px;
@@ -118,8 +117,8 @@ body {
 
 .hero-img {
   flex-shrink: 0;
-  width: 320px;   
-  height: 320px;  
+  width: 320px;
+  height: 320px;
 }
 
 @media (max-width: 1024px) {
@@ -163,6 +162,22 @@ body {
 .Lingue h2 {
   margin-bottom: 15px;
   font-size: 24px;
+}
+
+/* --- NUOVO: Ridimensionamento box Lingue su mobile --- */
+@media (max-width: 768px) {
+  .Lingue {
+    padding: 15px 20px; /* meno padding */
+    margin: 30px auto;  /* margini ridotti */
+    font-size: 14px;    /* testo più piccolo */
+    max-width: 90%;     /* box più stretto */
+    border-radius: 15px; /* angoli meno pronunciati */
+  }
+
+  .Lingue h2 {
+    font-size: 18px; /* titolo più piccolo */
+    margin-bottom: 10px;
+  }
 }
 
 /* Footer */
