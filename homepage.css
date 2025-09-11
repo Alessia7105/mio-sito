@@ -239,7 +239,7 @@ body {
   background-color: white;
   padding: 50px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  box-shadow: none
 }
 
 .about h2 {
