@@ -19,6 +19,7 @@ body {
 }
 
 /* Navbar */
+/* Stili esistenti */
 .navbar {
   background-color: #ffffff;
   display: flex;
@@ -32,12 +33,28 @@ body {
 }
 
 .navbar ul {
-  align-items: center;
   list-style: none;
   display: flex;
   gap: 30px;
 }
 
+.navbar ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+/* --- NUOVO: correzione per mobile --- */
+@media (max-width: 768px) {
+  .navbar nav {
+    justify-content: center; /* centra gli elementi */
+    padding: 20px; /* meno padding per risparmiare spazio su mobile */
+  }
+
+  .navbar ul {
+    gap: 20px; /* opzionale: riduce la distanza tra link */
+  }
+}
 .navbar ul li a {
   text-decoration: none;
   font-weight: bold;
